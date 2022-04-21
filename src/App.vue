@@ -15,16 +15,8 @@ import {
   MenuItems,
 } from "@headlessui/vue";
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/vue/outline";
-import { watch, reactive, computed, ref } from "vue";
-
+import { computed } from "vue";
 const route = useRoute();
-
-// fetch the user information when params change
-// watch(
-//   () => route.name,
-//   (name) => console.log(name)
-// );
-
 const user = {
   name: "Tom Cook",
   email: "tom@example.com",
@@ -38,7 +30,6 @@ const navigation = computed(() => [
   { name: "Calendar", href: "#", current: false },
   { name: "Reports", href: "#", current: false },
 ]);
-
 const userNavigation = [
   { name: "Your Profile", href: "#" },
   { name: "Settings", href: "#" },
